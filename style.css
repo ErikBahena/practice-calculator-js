@@ -26,8 +26,8 @@ body {
     ". one two three plus ."
     ". zero zero decimal equals .";
 
-  /* padding-top: 20px; */
-  padding-bottom: 20px;
+    min-width: min-content;
+  padding: 0px 7px 20px 7px;
 }
 
 /* since there is a slight varience between all other buttons and the zero button, its better to not repeat the same stying in more than one place. In case we want to change it later. So we can create a styling of the commonalities between the regular, and zero button*/
