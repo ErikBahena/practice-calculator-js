@@ -1,0 +1,149 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.main__container {
+  width: 50%;
+  background-color: #1c1c1c;
+  height: 500px;
+  max-width: 312px;
+  max-height: 600px;
+  margin: 0 auto;
+  margin-top: 150px;
+  border-radius: 30px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 8px 8px;
+  grid-template-areas:
+    ". . . . . ."
+    ". form form form form ."
+    ". clear plus-minus percent divide ."
+    ". seven eight nine multiply ."
+    ". four five six minus ."
+    ". one two three plus ."
+    ". zero zero decimal equals .";
+
+  /* padding-top: 20px; */
+  padding-bottom: 20px;
+}
+
+/* since there is a slight varience between all other buttons and the zero button, its better to not repeat the same stying in more than one place. In case we want to change it later. So we can create a styling of the commonalities between the regular, and zero button*/
+.regular,
+.zero-btn {
+  height: 60px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  background-color: #81808063;
+  color: #d4d4d2;
+  opacity: 0.9;
+  /* the border-style: none; removes that weird outline that buttons get */
+  border-style: none;
+}
+
+/* this change the opacity when hovered on*/
+.regular:hover,
+.zero-btn:hover {
+  opacity: 1;
+}
+
+/* this is the slight varience */
+.regular {
+  border-radius: 50%;
+  width: 60px;
+}
+
+/* this is a slight varience */
+.zero-btn {
+  border-radius: 18px;
+  width: 127px;
+}
+
+/* styling the orange buttons with an id, id's take precedence over classes so I gave all the buttons that we want to have an orange background an id of orange*/
+#orange {
+  /* background-color: #0059ffce; */
+  background-color: #ff9500;
+}
+
+/* originaly this was a form but I changed it to a div because there was some weird stuff going on with the way operators were shown in front of the number */
+.form-field {
+  background-color: #81808052;
+  border-style: none;
+  height: 60px;
+  width: 255px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-size: 40px;
+  outline: none;
+  color: #d4d4d2;
+  text-align: right;
+  overflow: hidden;
+  font-family: Arial;
+  padding-top: 15px;
+  padding-right: 8px;
+}
+
+/* all the styles below determine the positioning of the elements within their containers grid */
+.form {
+  grid-area: form;
+}
+.clear {
+  grid-area: clear;
+}
+.plus-minus {
+  grid-area: plus-minus;
+}
+.percent {
+  grid-area: percent;
+}
+.divide {
+  grid-area: divide;
+}
+.seven {
+  grid-area: seven;
+}
+.eight {
+  grid-area: eight;
+}
+.nine {
+  grid-area: nine;
+}
+.multiply {
+  grid-area: multiply;
+}
+.four {
+  grid-area: four;
+}
+.five {
+  grid-area: five;
+}
+.six {
+  grid-area: six;
+}
+.minus {
+  grid-area: minus;
+}
+.one {
+  grid-area: one;
+}
+.two {
+  grid-area: two;
+}
+.three {
+  grid-area: three;
+}
+.plus {
+  grid-area: plus;
+}
+.zero {
+  grid-area: zero;
+}
+.decimal {
+  grid-area: decimal;
+}
+.equals {
+  grid-area: equals;
+}
